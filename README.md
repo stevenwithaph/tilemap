@@ -1,6 +1,6 @@
 # @pixi/tilemap - PixiJS Tilemap Kit
 
-[![Automation CI](https://github.com/pixijs/tilemap/actions/workflows/main.yml/badge.svg)](https://github.com/pixijs/tilemap/actions/workflows/main.yml)
+[![Automation CI](https://github.com/pixijs-userland/tilemap/actions/workflows/main.yml/badge.svg)](https://github.com/pixijs-userland/tilemap/actions/workflows/main.yml)
 <p align="center">
 <img src="https://i.imgur.com/hfoiBRk.png" width="1280px" />
 <p/>
@@ -55,8 +55,8 @@ enough manner.
 
 ### Demos
 
-* [Basic Demo (WebGL)](https://pixijs.io/tilemap/examples/basic.html)
-* [Basic Demo (WebGPU)](https://pixijs.io/tilemap/examples/basic.html?preference=webgpu)
+* [Basic Demo (WebGL)](https://userland.pixijs.io/tilemap/examples/basic.html)
+* [Basic Demo (WebGPU)](https://userland.pixijs.io/tilemap/examples/basic.html?preference=webgpu)
 
 ### Settings
 
@@ -76,13 +76,13 @@ Canvas fallback is 5x slower than vanilla rpgmaker. WebGL version is faster and 
 
 ### RPGMaker Demo
 
-* [WebGL Demo](https://pixijs.io/tilemap/examples/)
-  * [60% Scale](https://pixijs.io/tilemap/examples/?scale=0.6)
-  * [140% Scale](https://pixijs.io/tilemap/examples/?scale=1.4)
-* [WebGL Retina Demo](https://pixijs.io/tilemap/examples/?resolution=2)
-  * [60% Scale](https://pixijs.io/tilemap/examples/?resolution=2&scale=0.6)
-  * [140% Scale](https://pixijs.io/tilemap/examples/?resolution=2&scale=1.4)
-* [WebGPU Demo](https://pixijs.io/tilemap/examples/?preference=webgpu)
+* [WebGL Demo](https://userland.pixijs.io/tilemap/examples/)
+  * [60% Scale](https://userland.pixijs.io/tilemap/examples/?scale=0.6)
+  * [140% Scale](https://userland.pixijs.io/tilemap/examples/?scale=1.4)
+* [WebGL Retina Demo](https://userland.pixijs.io/tilemap/examples/?resolution=2)
+  * [60% Scale](https://userland.pixijs.io/tilemap/examples/?resolution=2&scale=0.6)
+  * [140% Scale](https://userland.pixijs.io/tilemap/examples/?resolution=2&scale=1.4)
+* [WebGPU Demo](https://userland.pixijs.io/tilemap/examples/?preference=webgpu)
 
 ## More Tutorials
 
