@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Bounds, Container, groupD8, State, Texture, TextureSource } from 'pixi.js';
+import { Bounds, Container, groupD8, State, Texture, TextureSource, ViewContainer } from 'pixi.js';
 import { settings } from './settings';
 import { TilemapInstruction, TilemapPipe } from './TilemapPipe';
 import { TileTextureArray } from './TileTextureArray';
@@ -56,7 +56,7 @@ export const POINT_STRUCT_SIZE = (Object.keys(POINT_STRUCT).length / 2);
  *          .tile('brick_wall.png', 0, 100);
  * });
  */
-export class Tilemap extends Container
+export class Tilemap extends ViewContainer
 {
     // TODO: make default color work
     /**
@@ -123,6 +123,18 @@ export class Tilemap extends Container
 
     /** The interleaved geometry of the tilemap. */
     private pointsBuf: Array<number> = [];
+
+    protected updateBounds(): void {
+		const bounds = this.tilemapBounds;
+
+		this._bounds.minX = bounds.minX;
+		this._bounds.maxX = bounds.maxX;
+		this._bounds.minY = bounds.minY;
+		this._bounds.maxY = bounds.maxY;
+    }
+
+    public batched: boolean;
+
 
     /**
      * @param tileset - The tileset to use for the tilemap. This can be reset later with {@link Tilemap.setTileset}. The
