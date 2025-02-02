@@ -71,6 +71,10 @@ export class TilemapPipe implements RenderPipe<Tilemap>, InstructionPipe<Tilemap
             label: 'index-tilemap-buffer',
             usage: BufferUsage.INDEX | BufferUsage.COPY_DST,
         });
+		// Remove the destroy method from the index buffer to prevent it from being destroyed.
+		// This is because the index buffer is shared between all tilemaps, and .destroy will be called when destroying a tilemap.
+        this.indexBuffer.destroy = () => {};
+
 	    this.checkIndexBuffer(2000);
     }
 
