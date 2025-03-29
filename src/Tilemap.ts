@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Bounds, Container, groupD8, State, Texture, TextureSource, ViewContainer } from 'pixi.js';
+import { Bounds, groupD8, State, Texture, TextureSource, ViewContainer } from 'pixi.js';
 import { settings } from './settings';
 import { TilemapInstruction, TilemapPipe } from './TilemapPipe';
 import { TileTextureArray } from './TileTextureArray';
@@ -124,17 +124,17 @@ export class Tilemap extends ViewContainer
     /** The interleaved geometry of the tilemap. */
     private pointsBuf: Array<number> = [];
 
-    protected updateBounds(): void {
-		const bounds = this.tilemapBounds;
+    protected updateBounds(): void
+    {
+        const bounds = this.tilemapBounds;
 
-		this._bounds.minX = bounds.minX;
-		this._bounds.maxX = bounds.maxX;
-		this._bounds.minY = bounds.minY;
-		this._bounds.maxY = bounds.maxY;
+        this._bounds.minX = bounds.minX;
+        this._bounds.maxX = bounds.maxX;
+        this._bounds.minY = bounds.minY;
+        this._bounds.maxY = bounds.maxY;
     }
 
     public batched: boolean;
-
 
     /**
      * @param tileset - The tileset to use for the tilemap. This can be reset later with {@link Tilemap.setTileset}. The
@@ -142,7 +142,7 @@ export class Tilemap extends ViewContainer
      */
     constructor(tileset: TextureSource | Array<TextureSource>)
     {
-        super();
+        super({});
         this.setTileset(tileset);
     }
 
