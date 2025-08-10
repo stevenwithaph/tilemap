@@ -125,5 +125,23 @@
         initialize();
     };
 
+    let panPos = undefined;
+
+    app.canvas.addEventListener('mousemove', (e) => {
+        if (!panPos) return;
+
+        app.stage.position.x += e.pageX - panPos.x;
+        app.stage.position.y += e.pageY - panPos.y;
+        panPos = { x: e.pageX, y: e.pageY };
+    });
+
+    app.canvas.addEventListener('mousedown', (e) => {
+        panPos = { x: e.pageX, y: e.pageY };
+    });
+
+    app.canvas.addEventListener('mouseup', (e) => {
+        panPos = undefined;
+    });
+
     runApp();
 })();
