@@ -173,8 +173,7 @@ export class TilemapPipe implements RenderPipe<Tilemap>, InstructionPipe<Tilemap
         let anim_frame = this.tileAnim;
         const { u_anim_frame } = pipe_uniforms.uniforms;
 
-        u_global.uProjectionMatrix.copyTo(u_proj_trans).append(u_global.uWorldTransformMatrix)
-            .append(tilemap.worldTransform);
+        u_global.uProjectionMatrix.copyTo(u_proj_trans).append(tilemap.worldTransform);
         if (tilemap.compositeParent)
         {
             anim_frame = (tilemap.parent as CompositeTilemap).tileAnim || anim_frame;
